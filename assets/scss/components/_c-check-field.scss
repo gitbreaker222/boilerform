@@ -27,20 +27,6 @@ $namespace: ".c-check-field";
             border-radius: $border-radius;
             position: relative;
             cursor: pointer;
-
-            &:after {
-                content: "";
-                speak: none;
-                display: block;
-                opacity: 0;
-                width: 70%;
-                height: 70%;
-                position: absolute;
-                top: 15%;
-                left: 15%;
-                background: color(check, decor__inner);
-                border-radius: #{ $border-radius / 2 };
-            }
         }
 
         &__label {
@@ -50,17 +36,13 @@ $namespace: ".c-check-field";
 
         // Radio modifier
         &--radio #{ $namespace }__decor {
-            &,
-            &:after {
-                border-radius: 50%;
-            }
+            border-radius: 50%;
         }
 
         // Checked state
         &__input:checked ~ [class*="decor"] {
-            &:after {
-                opacity: 1;
-            }
+            background: color(check, decor__inner);
+            box-shadow: 0 0 0 $border-radius color(check, decor) inset;
         }
 
         // Focused state
