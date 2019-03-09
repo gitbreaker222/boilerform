@@ -1,10 +1,12 @@
-/*------------------------------------*    NAMESPACE
+/*------------------------------------*\
+    NAMESPACE
 
     This mixin encapsulates CSS within 
     a namespace to prevent outside
     conflicts as much as possible.
 \*------------------------------------*/
-/*------------------------------------*    COLOR
+/*------------------------------------*\
+    COLOR
 
     Pass in a group name and a key
     to get a value. 
@@ -57,7 +59,8 @@
   .boilerform input[type="search"] {
     -webkit-appearance: textfield; }
 
-/*------------------------------------*    BUTTON COMPONENT
+/*------------------------------------*\
+    BUTTON COMPONENT
 
     Base button styles and reset
 \*------------------------------------*/
@@ -80,7 +83,8 @@
   .boilerform .c-button:hover, .boilerform .c-button:focus {
     background: #888888; }
 
-/*------------------------------------*    CHECK FIELD COMPONENT
+/*------------------------------------*\
+    CHECK FIELD COMPONENT
 
     Radio buttons and checkboxes
 \*------------------------------------*/
@@ -98,32 +102,22 @@
     border-radius: 2px;
     position: relative;
     cursor: pointer; }
-    .boilerform .c-check-field__decor:after {
-      content: "";
-      speak: none;
-      display: block;
-      opacity: 0;
-      width: 70%;
-      height: 70%;
-      position: absolute;
-      top: 15%;
-      left: 15%;
-      background: #888888;
-      border-radius: 1px; }
   .boilerform .c-check-field__label {
     padding: 3px 0 0 10px;
     cursor: pointer; }
-  .boilerform .c-check-field--radio .c-check-field__decor, .boilerform .c-check-field--radio .c-check-field__decor:after {
+  .boilerform .c-check-field--radio .c-check-field__decor {
     border-radius: 50%; }
-  .boilerform .c-check-field__input:checked ~ [class*="decor"]:after {
-    opacity: 1; }
+  .boilerform .c-check-field__input:checked ~ [class*="decor"] {
+    background: #888888;
+    box-shadow: 0 0 0 2px #eeeeee inset; }
   .boilerform .c-check-field__input:focus ~ [class*="decor"] {
     outline: 1px dotted #212121;
     outline: 5px auto -webkit-focus-ring-color; }
   .boilerform .c-check-field + .c-check-field {
     padding-top: 10px; }
 
-/*------------------------------------*    INPUT FIELD COMPONENT
+/*------------------------------------*\
+    INPUT FIELD COMPONENT
 
     All input based form field elements
 \*------------------------------------*/
@@ -137,7 +131,8 @@
   .boilerform .c-input-field--multiline:not([rows]) {
     min-height: 80px; }
 
-/*------------------------------------*    LABEL COMPONENT
+/*------------------------------------*\
+    LABEL COMPONENT
 
     A simple form label
 \*------------------------------------*/
@@ -154,7 +149,8 @@
   .boilerform .c-label + [class*="field"] {
     margin-top: 2px; }
 
-/*------------------------------------*    SELECT FIELD
+/*------------------------------------*\
+    SELECT FIELD
 
     Option driven fields such as 
     <select> menus
@@ -177,7 +173,8 @@
     right: 15px;
     pointer-events: none; }
 
-/*------------------------------------*    FORM LAYOUT
+/*------------------------------------*\
+    FORM LAYOUT
 
     The main form layout that gives
     you rythm, alignment and flow
